@@ -27,7 +27,7 @@ public class SceneB {
     }
 
     public Scene createScene() {
-        return new Scene(createElementsSceneB(), 1100, 650);
+        return new Scene(createElementsSceneB(), 1100, 660);
     }
 
     public BorderPane createElementsSceneB() {
@@ -94,7 +94,7 @@ public class SceneB {
         choiceBox.setValue(DataSceneB.generateMediumItem(TYPES.RELY.type));
         Label label2 = new Label(TYPES.DATA.type);
         ChoiceBox<Item> choiceBox1 = new ChoiceBox<>(DataSceneB.generateItems(TYPES.DATA.type,
-                new ArrayList<>(List.of("Extra High"))));
+                new ArrayList<>(List.of("Very Low", "Extra High"))));
         choiceBox1.setValue(DataSceneB.generateMediumItem(TYPES.DATA.type));
         Label label3 = new Label(TYPES.CPLX.type);
         ChoiceBox<Item> choiceBox2 = new ChoiceBox<>(DataSceneB.generateItems(TYPES.CPLX.type, new ArrayList<>()));

@@ -14,12 +14,17 @@ public class MainView {
     private final SceneA stageA;
     private final SceneB stageB;
     private final SceneC stageC;
+    private final SceneD stageD;
 
     public MainView(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.stageA = new SceneA(primaryStage);
         this.stageB = new SceneB(primaryStage);
         this.stageC = new SceneC(primaryStage);
+        this.stageD = new SceneD(primaryStage);
+
+        primaryStage.setX(200);
+        primaryStage.setY(80);
 
         menuStage();
     }
@@ -36,6 +41,7 @@ public class MainView {
         Button sceneA = createButton(MenuType.BASIC_COCOMO.type);
         Button sceneB = createButton(MenuType.INTERMEDIATE_COCOMO.type);
         Button sceneC = createButton(MenuType.COCOMO_2.type);
+        Button sceneD = createButton(MenuType.FUNCTIONAL_POINT.type);
 
         sceneA.setOnAction(actionEvent -> {
             primaryStage.setTitle(MenuType.BASIC_COCOMO.type);
@@ -52,9 +58,14 @@ public class MainView {
             primaryStage.setScene(stageC.createScene());
         });
 
+        sceneD.setOnAction(actionEvent -> {
+            primaryStage.setTitle(MenuType.FUNCTIONAL_POINT.type);
+            primaryStage.setScene(stageD.createScene());
+        });
+
         vBox.setPadding(new Insets(10));
         vBox.setSpacing(30);
-        vBox.getChildren().addAll(sceneA, sceneB, sceneC);
+        vBox.getChildren().addAll(sceneA, sceneB, sceneC, sceneD);
         vBox.setAlignment(Pos.CENTER);
         vBox.setStyle("-fx-font-size: 30px");
 

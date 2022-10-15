@@ -24,7 +24,7 @@ public class SceneA {
     }
 
     public Scene createScene() {
-        return new Scene(createElementsSceneA(), 800, 500);
+        return new Scene(createElementsSceneA(), 800, 600);
     }
 
     public BorderPane createElementsSceneA() {

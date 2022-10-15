@@ -25,7 +25,7 @@ public class SceneC {
     }
 
     public Scene createScene() {
-        return new Scene(createElementsSceneC(), 1100, 790);
+        return new Scene(createElementsSceneC(), 1100, 730);
     }
 
     public BorderPane createElementsSceneC() {
@@ -261,7 +261,7 @@ public class SceneC {
         ChoiceBox<Item> choiceBox2 = new ChoiceBox<>(DataSceneC.generateItems(TYPES.RCPX.type,
                 new ArrayList<>(List.of())));
         choiceBox2.setValue(DataSceneC.generateMediumItem(TYPES.RCPX.type));
-        Label label6 = new Label(TYPES.RUSY.type);
+        Label label6 = new Label(TYPES.RUSE.type);
         ChoiceBox<Item> choiceBox3 = new ChoiceBox<>(DataSceneC.generateItems(TYPES.RUSE_EARLY.type,
                 new ArrayList<>(List.of("Extra Low", "Very Low"))));
         choiceBox3.setValue(DataSceneC.generateMediumItem(TYPES.RUSE_EARLY.type));
@@ -379,7 +379,7 @@ public class SceneC {
         ChoiceBox<Item> choiceBox8 = new ChoiceBox<>(DataSceneC.generateItems(TYPES.CPLX.type,
                 new ArrayList<>(List.of("Extra Low"))));
         choiceBox8.setValue(DataSceneC.generateMediumItem(TYPES.CPLX.type));
-        Label label12 = new Label(TYPES.RUSY.type);
+        Label label12 = new Label(TYPES.RUSE.type);
         ChoiceBox<Item> choiceBox9 = new ChoiceBox<>(DataSceneC.generateItems(TYPES.RUSE_POST.type,
                 new ArrayList<>(List.of("Very Low", "Extra Low"))));
         choiceBox9.setValue(DataSceneC.generateMediumItem(TYPES.RUSE_POST.type));

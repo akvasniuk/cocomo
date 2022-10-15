@@ -36,7 +36,7 @@ enum TYPES {
     RUSE_EARLY("RUSE_EARLY"),
     SCED_EARLY("SCED_EARLY"),
     SCED("SCED"),
-    RUSY("RUSY");
+    RUSE("RUSE");
 
     final String type;
 
