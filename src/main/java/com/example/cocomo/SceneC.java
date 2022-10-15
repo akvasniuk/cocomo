@@ -175,6 +175,8 @@ public class SceneC {
                                 v * attributes.get(value.getValue().getType())
                                         .get(value.getValue().getChoice())));
 
+                        System.out.println(effortAdjustmentFactor.get());
+
                         effort = effortAdjustmentFactor.get() * variableA_EARLY * Math.pow(size, variableE);
 
                         time = getSCED(choiceBoxListEarlyDesign, TYPES.SCED_EARLY.type) * variableC
