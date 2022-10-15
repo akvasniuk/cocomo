@@ -78,10 +78,18 @@ public class SceneA {
         calculateComoco.setOnAction(actionEvent -> {
             hBox1.getChildren().clear();
             RadioButton radioButton = (RadioButton) toggleGroup.getSelectedToggle();
-            int size;
+            double size;
 
             try {
-                size = Integer.parseInt(textField.getText());
+                if (textField.getText().matches(".*[a-zA-Z]+.*")){
+                    textField.setText("Only numbers");
+                }else if(textField.getText().trim().length() == 0){
+                    textField.setText("Empty String, please enter number");
+                } else if(Double.parseDouble(textField.getText()) < 0) {
+                    textField.setText("Enter positive number");
+                }
+
+                size = Double.parseDouble(textField.getText());
 
                 int model;
                 double effort;
@@ -108,7 +116,7 @@ public class SceneA {
                 staff = effort / time;
                 productivity = size / effort;
 
-                int finalSize = size;
+                double finalSize = size;
                 LinkedHashMap<String, String> items = new LinkedHashMap<>() {
                     {
                         this.put("MODE", radioButton.getText());

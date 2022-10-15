@@ -585,6 +585,16 @@ public class SceneD {
                     (RadioButton) toggleGroup18.getSelectedToggle().getToggleGroup().getSelectedToggle()
             ));
 
+            textFields.forEach(v -> {
+                if (v.getText().matches(".*[a-zA-Z]+.*")){
+                    v.setText("Only numbers");
+                }else if(v.getText().trim().length() == 0){
+                    v.setText("Empty String, please enter number");
+                } else if(Double.parseDouble(v.getText()) < 0) {
+                    v.setText("Enter positive number");
+                }
+            });
+
             try {
                 int UFP = 0;
                 int sumF = 0;

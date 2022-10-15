@@ -154,7 +154,15 @@ public class SceneC {
                 double variableB = 0.91;
                 double variableC = 3.67;
                 double variableD = 0.28;
-                int size = Integer.parseInt(textField.getText());
+                if (textField.getText().matches(".*[a-zA-Z]+.*")){
+                    textField.setText("Only numbers");
+                }else if(textField.getText().trim().length() == 0){
+                    textField.setText("Empty String, please enter number");
+                } else if(Double.parseDouble(textField.getText()) < 0) {
+                    textField.setText("Enter positive number");
+                }
+
+                double size = Double.parseDouble(textField.getText());
                 double effort = 0;
                 double time = 0;
                 double staff;
@@ -174,8 +182,6 @@ public class SceneC {
                         choiceBoxListEarlyDesign.forEach(value -> effortAdjustmentFactor.updateAndGet(v ->
                                 v * attributes.get(value.getValue().getType())
                                         .get(value.getValue().getChoice())));
-
-                        System.out.println(effortAdjustmentFactor.get());
 
                         effort = effortAdjustmentFactor.get() * variableA_EARLY * Math.pow(size, variableE);
 
