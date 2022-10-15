@@ -32,7 +32,7 @@ public class SceneD {
 
 
     public Scene createScene() {
-        return new Scene(createElementsSceneC(), 1100, 730);
+        return new Scene(createElementsSceneC(), 1130, 730);
     }
 
     public BorderPane createElementsSceneC() {
@@ -291,6 +291,7 @@ public class SceneD {
         hBox25.setAlignment(Pos.CENTER);
         hBox25.setSpacing(20);
 
+
         HBox hBox26 = new HBox();
         ToggleGroup toggleGroup11 = new ToggleGroup();
         RadioButton r36 = new RadioButton("0");
@@ -310,7 +311,7 @@ public class SceneD {
         hBox26.getChildren().addAll(r36, r37, r38, r39, r40, r41);
         hBox26.setAlignment(Pos.CENTER);
         hBox26.setSpacing(50);
-        hBox27.getChildren().addAll(new Label("7. Does the on-line data entry require the input transaction to be build over multiple...?"), hBox26);
+        hBox27.getChildren().addAll(new Label("7. Does the on-line data entry require the input transaction to be built over multiple...?"), hBox26);
         hBox27.setAlignment(Pos.CENTER);
         hBox27.setSpacing(20);
 
@@ -330,7 +331,7 @@ public class SceneD {
         r46.setToggleGroup(toggleGroup12);
         r47.setToggleGroup(toggleGroup12);
         HBox hBox29 = new HBox();
-        hBox28.getChildren().addAll(r36, r37, r38, r39, r40, r41);
+        hBox28.getChildren().addAll(r42, r43, r44, r45, r46, r47);
         hBox28.setAlignment(Pos.CENTER);
         hBox28.setSpacing(50);
         hBox29.getChildren().addAll(new Label("8. Are the master files update on-line?"), hBox28);
@@ -590,13 +591,13 @@ public class SceneD {
                 for (int i = 0; i < radioButtons.size(); i++) {
                     switch (radioButtons.get(i).getText()) {
                         case "Simple":
-                                UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][0];
+                            UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][0];
                             break;
                         case "Average":
-                                UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][1];
+                            UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][1];
                             break;
                         case "High":
-                                UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][2];
+                            UFP += Integer.parseInt(textFields.get(i).getText()) * table[i][2];
                             break;
                     }
                 }
@@ -624,14 +625,14 @@ public class SceneD {
                     hBox1.getChildren().add(leb);
                 });
 
-        vBox.setStyle("-fx-font-size: 10px;");
-        hBox1.setStyle("-fx-background-color:#168878; -fx-font-size: 20px;");
-        reset.setMinWidth(70);
-        calculateComoco.setMinWidth(180);
-        mainStage.setWidth(1200);
+                vBox.setStyle("-fx-font-size: 10px;");
+                hBox1.setStyle("-fx-background-color:#168878; -fx-font-size: 20px;");
+                reset.setMinWidth(70);
+                calculateComoco.setMinWidth(180);
+                mainStage.setWidth(1200);
             } catch (Exception e) {
                 e.printStackTrace();
-           }
+            }
         });
 
         return borderPane;
